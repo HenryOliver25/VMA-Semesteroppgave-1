@@ -3,6 +3,7 @@
 
 # LAGRE ENDRINGRER TIL GITHUB: 
 # Åpne terminal i VSCode -> Git bash
+# Lagre endringer (CTRL+S)
 # $ git add . (legger til alle filer)
 # $ git commit -m "din besked/hva du har endret" (legger til beskjed)
 # $ git push -u origin main (Pusher endringer til github)
