@@ -23,5 +23,18 @@ dataSet = pd.read_excel("Assignment_1_data.xlsx")
 #   a) 
 #
 
-#print("Mean daily reutrn", dataSet[0][1],": ", dataSet["OSEBX"].mean())
+ex = pd.DataFrame([3, 4, 5, 7, 9])
+
+#print(dataSet["Date"] )
+# print(ex.mean())
+print("Mean dealy return OSEBX: ", dataSet["OSEBX"].mean())
+print("Mean dealy return EQUINOR: ", dataSet["EQUINOR"].mean())
+
+
+# summarizing all daily returns into array of total annual return: annual return
+# when "some variable" equals new year, start new element in array which is summerized as the next 252 days
+# return 2001: 137 trading days
+# returns the mean annual return using .mean() functio
+
+
 
