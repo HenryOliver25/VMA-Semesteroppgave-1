@@ -23,6 +23,5 @@ dataSet = pd.read_excel("Assignment_1_data.xlsx")
 #   a) 
 #
 
-print(dataSet)
-print("Mean daily reutrn", dataSet[0][1],": ", dataSet["OSEBX"].mean())
+#print("Mean daily reutrn", dataSet[0][1],": ", dataSet["OSEBX"].mean())
 
