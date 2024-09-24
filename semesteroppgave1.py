@@ -34,7 +34,22 @@ print("Mean dealy return EQUINOR: ", dataSet["EQUINOR"].mean())
 # summarizing all daily returns into array of total annual return: annual return
 # when "some variable" equals new year, start new element in array which is summerized as the next 252 days
 # return 2001: 137 trading days
-# returns the mean annual return using .mean() functio
+# returns the mean annual return using .mean() function
+
+# grupperer år
+dataSet["year"] = dataSet["Date"].dt.year
+print(dataSet.groupby("year")["OSEBX"].mean())
 
 
 
+# i = 1
+# sumAnnual = [0, 0]
+# 
+# while i <= len(dataSet):
+#     sumAnnual[0] += dataSet["OSEBX"][i]
+#     sumAnnual[1] += dataSet["EQUINOR"][i]
+#     if i == 136:
+#         print(dataSet["Date"][i], sumAnnual[0], sumAnnual[1])
+#         break
+#     i+=1
+# 
