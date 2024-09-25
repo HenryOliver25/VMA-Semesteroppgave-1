@@ -56,6 +56,7 @@ print("Mean annual return OSEBX: ", sum_annual_return_OSEBX.mean(), "\nMean annu
 i=np.ones(len(dataSet))
 print(i)
 
+# jaja
 
 
 
