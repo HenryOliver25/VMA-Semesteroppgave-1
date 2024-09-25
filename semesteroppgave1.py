@@ -65,9 +65,33 @@ vector_mean_daily_return_OSEBX=np.full(N_O, mean_daily_return_OSEBX) #vector of 
 vector_mean_daily_return_EQUINOR=np.full(N_E, mean_daily_return_EQUINOR) #vector of mean daily returns, EQUINOR
 print("vector with mean daily return is:", vector_mean_daily_return_OSEBX)
 print("vector with mean daily return is:", vector_mean_daily_return_EQUINOR)
-print("the lenght of OSEBX`s vector of mean daily return is:", len(vector_mean_daily_return_OSEBX))
-print("the lenght of Equinor`s vector of mean daily return is:", len(vector_mean_daily_return_EQUINOR))
+print("the lenght of OSEBX`s vector of mean daily return:", len(vector_mean_daily_return_OSEBX))
+print("the lenght of Equinor`s vector of mean daily return:", len(vector_mean_daily_return_EQUINOR))
 
+#
+#c)
+#use the equation from the assignment, where i=one_vector, i^T=one_vector_transposed
+#y is repesented by daily returns 
+#1/N represents 1/4404, because there are 4404 coloumns 
+
+#make a coloumn vector of ones 
+one_vector=np.ones((4404, 1))
+#the transposed of the one_vector 
+one_vector_transposed=np.transpose(one_vector)
+
+#print(daily_return_OSEBX-(1/N_O*(one_vector)(one_vector_transposed*daily_return_OSEBX)))
+iiT=np.dot(one_vector, one_vector_transposed) #matrix multiplication of the ones matrix and its transposed
+#print(iiT)
+iiTy=np.dot(iiT, daily_return_OSEBX) #matrix multiplication of the 4404x4404 ones matrix times daily_return matrix
+#print("mjau", iiTy)
+
+avarage=(1/N_O)*iiTy
+
+solution=daily_return_OSEBX-avarage
+print("we get a new vector where each element is represented by the difference between the daily returns and the mean daily return", solution)
+
+
+#utrykket er en ny vektor som viser avviket fra gjennomsnittet
 
 
 
