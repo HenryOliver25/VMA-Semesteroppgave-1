@@ -48,15 +48,21 @@ sum_annual_return_EQUINOR = dataSet.groupby("year")["EQUINOR"].sum()
 # sum of each year divided by no. of years gives mean annual return over the time frame
 print("Mean annual return OSEBX: ", sum_annual_return_OSEBX.mean(), "\nMean annual return EQUINOR: ", sum_annual_return_EQUINOR.mean())
 
+
 #
 #   b)
 #
-
 #lager en i vektor som er N-dimensjonal og kun består av 1ere
-i=np.ones(len(dataSet))
-print(i)
-
-# jaja
+#i=np.ones(len(dataSet.columns))
+#print(i)
+N_O=len(daily_return_OSEBX) #lenght of vector daily return OSEBX
+N_E=len(daily_return_EQUINOR) #lenght of vector daily returns EQUINOR
+vector_mean_daily_return_OSEBX=np.full(N_O, mean_daily_return_OSEBX) #vector of mean daily returns, OSEBX
+vector_mean_daily_return_EQUINOR=np.full(N_E, mean_daily_return_EQUINOR) #vector of mean daily returns, EQUINOR
+print("vector with mean daily return is:", vector_mean_daily_return_OSEBX)
+print("vector with mean daily return is:", vector_mean_daily_return_EQUINOR)
+print("the lenght of OSEBX`s vector of mean daily return is:", len(vector_mean_daily_return_OSEBX))
+print("the lenght of Equinor`s vector of mean daily return is:", len(vector_mean_daily_return_EQUINOR))
 
 
 
