@@ -55,6 +55,10 @@ print("Mean annual return OSEBX: ", sum_annual_return_OSEBX.mean(), "\nMean annu
 #lager en i vektor som er N-dimensjonal og kun består av 1ere
 #i=np.ones(len(dataSet.columns))
 #print(i)
+
+daily_return_OSEBX=dataSet["OSEBX"]
+daily_return_EQUINOR=dataSet["EQUINOR"]
+
 N_O=len(daily_return_OSEBX) #lenght of vector daily return OSEBX
 N_E=len(daily_return_EQUINOR) #lenght of vector daily returns EQUINOR
 vector_mean_daily_return_OSEBX=np.full(N_O, mean_daily_return_OSEBX) #vector of mean daily returns, OSEBX
