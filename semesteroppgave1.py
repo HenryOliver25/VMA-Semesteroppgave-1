@@ -25,6 +25,12 @@ dataSet = pd.read_excel("Assignment_1_data.xlsx")
 #   a) 
 #
 
+# using pandas data frame to calculate mean values.
+# instead, averages can be found by creating a vector (ex. i), 
+# do the transpose of i (i') and multiplying it by the y vector
+# and dividing it by the number of daily returns (no. of columns), 
+# which will get you the mean daily return
+
 mean_daily_return_OSEBX=dataSet["OSEBX"].mean()
 mean_daily_return_EQUINOR=dataSet["EQUINOR"].mean()
 
@@ -40,15 +46,14 @@ dataSet["year"] = dataSet["Date"].dt.year
 sum_annual_return_OSEBX = dataSet.groupby("year")["OSEBX"].sum()
 sum_annual_return_EQUINOR = dataSet.groupby("year")["EQUINOR"].sum()
 # sum of each year divided by no. of years gives mean annual return over the time frame
-print(sum_annual_return_OSEBX, sum_annual_return_EQUINOR)
-print(sum_annual_return_OSEBX.mean(), sum_annual_return_EQUINOR.mean())
+print("Mean annual return OSEBX: ", sum_annual_return_OSEBX.mean(), "\nMean annual return EQUINOR: ", sum_annual_return_EQUINOR.mean())
 
 #
 #   b)
 #
 
 #lager en i vektor som er N-dimensjonal og kun består av 1ere
-i=np.ones(len(dataSet.columns))
+i=np.ones(len(dataSet))
 print(i)
 
 
