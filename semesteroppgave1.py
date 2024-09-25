@@ -63,7 +63,7 @@ N_O=len(daily_return_OSEBX) #lenght of vector daily return OSEBX
 N_E=len(daily_return_EQUINOR) #lenght of vector daily returns EQUINOR
 vector_mean_daily_return_OSEBX=np.full(N_O, mean_daily_return_OSEBX) #vector of mean daily returns, OSEBX
 vector_mean_daily_return_EQUINOR=np.full(N_E, mean_daily_return_EQUINOR) #vector of mean daily returns, EQUINOR
-print("vector with OSEBX´s mean daily return is:", vector_mean_daily_return_OSEBX)
+print("vector with OSEBX`s mean daily return is:", vector_mean_daily_return_OSEBX)
 print("vector with EQUINOR`s mean daily return is:", vector_mean_daily_return_EQUINOR)
 print("the lenght of OSEBX`s vector of mean daily return:", len(vector_mean_daily_return_OSEBX))
 print("the lenght of Equinor`s vector of mean daily return:", len(vector_mean_daily_return_EQUINOR))
@@ -78,7 +78,7 @@ print("the lenght of Equinor`s vector of mean daily return:", len(vector_mean_da
 #make a coloumn vector of ones 
 i=np.ones((4404, 1)) #i
 
-#the transposed of the one_vector 
+#the transposed of the one_vector, the transposed of i. 
 i_transposed=np.transpose(i) #i^T
 
 #matrix multiplication of the ones matrix and its transposed, it gived a 4404x4404 matrix, ii^T
