@@ -108,6 +108,30 @@ solution_EQUINOR=daily_return_EQUINOR-avarage_EQUINOR
 print("the solution shows us how much the daily return of EQUINOR-stock deviates from the mean daily returns")
 print(solution_EQUINOR)
 
+#
+#d)
+#show that M=I-(1/N)ii^T
+#create identity matrix, I
+I=np.identity(4404)
+
+#creating matrix M
+M=I-(1/N_O)*i*i_transposed
+
+#1 show that M is symmetric
+#mean that M=M^T
+M_transponert=M.transpose
+
+
+#2
+#show M is idempotent
+if M.all()==(M*M).all():
+    print("ja")
+else: 
+    print("nein")
+
+
+
+
 
 
 
